@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: o;
+}
+
+.contain {
+  background: #ffcccc;
+}
+
+.contain .nav {
+  font-size: 14px;
+}
+
+.contain .nav .content {
+  background-color: red;
+  font-size: 16px;
+}
+
+.contain .nav .content:hover {
+  color: yellow;
+}

@@ -1,0 +1,21 @@
+$baccolor:red;
+$my_font:14px;
+
+body{
+    margin: 0;
+    padding: o;
+}
+
+.contain {
+    background:lighten($baccolor, 40%);
+    .nav{
+        font-size: $my_font;
+        .content {
+            background-color: $baccolor;
+            font-size: 14px + 2px;
+            &:hover{
+                color: yellow;
+            }
+        }
+    }
+}

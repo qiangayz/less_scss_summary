@@ -1,0 +1,43 @@
+@fontSize: 12px;
+@bgColor: red;
+
+// 使用一个类选择器来定义个一个mixin函数，有以下两种方式：
+
+// 不加括号类型的
+.my_mixin_block1{
+    width: 300px;
+    height: 200px;
+}
+
+// 不加括号的mixin编译后会存在，加括号的会消失
+.my_mixin_block2(@input_px){
+    ul{
+        width: 300px + @input_px;
+        height: 200px + @input_px;
+        li{
+            background-color: pink
+        }
+    };
+   
+}
+.my_mixin_block2(2px);
+
+body{
+    padding:0;
+    margin:0;
+}
+
+.wrapper{
+    background:lighten(@bgColor, 40%);
+    .my_mixin_block1();
+    .nav{
+        .my_mixin_block1();
+        color:red;
+    }
+    .content{
+        .my_mixin_block2(50px);
+        &:hover{
+            background:red;
+        }
+    }
+}
